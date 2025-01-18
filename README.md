@@ -11,7 +11,7 @@ The token was first deployed and tested locally on a simple testnet environment 
 - **Token Name**: AITU_SE2324_KV  
 - **Token Symbol**: AITU  
 - **Decimals**: 18  
-- **Initial Supply**: 2000 tokens (scaled by `10^18` for decimal precision).  
+- **Initial Supply**: 2000 tokens (scaled by `10^18` for decimal precision). p.s. Actually can be any desired amount  
 
 The contract uses OpenZeppelin’s secure and tested `ERC20` implementation for all standard token operations.  
 
@@ -58,7 +58,7 @@ The contract was initially deployed and tested on a local testnet to verify its 
    - Tokens were minted to the deployer’s wallet.  
 
 2. **Token Transfers**  
-   - Tokens were transferred from the deployer’s wallet to another wallet using `transfer`.  
+   - Tokens were transferred from the deployer’s wallet to another wallet using `transfer`.
 
 3. **Function Testing**  
    After performing transactions, the following functions were tested to ensure they returned accurate results:  
@@ -86,7 +86,7 @@ After validating the contract functionality locally, it was deployed on the Sepo
 - **Network**: Sepolia Testnet  
 - **Wallet**: Metamask  
 - **Initial Supply**: 2000 tokens  
-- **Contract Address**: [Add contract address if required]  
+- **Contract Address**: `0x5CCd34AADA8D03584a3d94C438Eff058B50cE81A`
 
 #### Testing on Sepolia  
 The same tests conducted on the local testnet were repeated on Sepolia, including:  
@@ -110,10 +110,10 @@ The file `sepoliascreens.pdf` contains evidence of the contract deployment and i
    - **Metamask Wallet**: For deployment and testing on Sepolia.  
 
 2. **Libraries**  
-   - **OpenZeppelin**: Used for ERC-20 standard implementation.  
+   - **OpenZeppelin**: Used for ERC-20 standard implementation.  (Heavily)
 
 3. **Blockchain Networks**  
-   - **Local Testnet**: For initial deployment and testing.  
+   - **Local Testnet**: For initial deployment and testing.  (Ganache, Remix VM)
    - **Sepolia Testnet**: For the bonus task.  
 
 ---
@@ -125,9 +125,12 @@ The file `sepoliascreens.pdf` contains evidence of the contract deployment and i
 2. Interact with the deployed contract using tools like Metamask, Remix, or blockchain libraries (e.g., Web3.js, Ethers.js).  
 
 ### Interactions  
-- **Token Transfers**: Use `transfer` and `transferFrom` to send tokens.  
-- **Retrieve Metadata**: Call the custom functions to get details about the latest transaction, token name, symbol, decimals, and total supply.  
+- **Token Transfers**: Use `transfer` to send tokens.  We have `allowance` and `transferFrom` for use by 3rd party dApps. 
+- **Retrieve Metadata**: Call the custom functions to get details about the latest transaction, token name, symbol, decimals, and total supply.  Mostly utilized by the metamask itself.
 
 ---
+
+
+
 
 
